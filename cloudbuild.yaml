@@ -2,15 +2,15 @@ steps:
 
 - id: go_env
   name: "gcr.io/cloud-builders/go"
-  args: ["env -w GOROOT=./src/app"]
+  args: ["env -w GOROOT=./src"]
 
 - id: go_test
   name: "gcr.io/cloud-builders/go"
-  args: ["test","./src/app"]
+  args: ["test","./src"]
 
 - id: go_build
   name: "gcr.io/cloud-builders/go"
-  args: ["build","./src/app/app.go"]
+  args: ["build","./src/app.go"]
 
 - id: build_docker
   name: "gcr.io/cloud-builders/docker"
