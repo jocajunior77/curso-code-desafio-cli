@@ -2,7 +2,7 @@ steps:
 
 - id: go_env
   name: "gcr.io/cloud-builders/go"
-  args: ["env -w GOROOT=$HOME/go"]
+  args: ["env -w GOROOT=./src/app"]
 
 - id: go_test
   name: "gcr.io/cloud-builders/go"
